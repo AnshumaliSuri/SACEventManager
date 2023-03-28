@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "716318083855",
+    "project_id": "student-activity-centre-3d5f4",
+    "storage_bucket": "student-activity-centre-3d5f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716318083855:android:0a5d7dfc118af40f22cc7a",
+        "android_client_info": {
+          "package_name": "com.nitp.sac_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "716318083855-5tr4h2h0pcrgggg2s6btd9u1hgtsn0rj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGnf_SsSrTe3dHvuOmAV_FU02i-7VUZhw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "716318083855-5tr4h2h0pcrgggg2s6btd9u1hgtsn0rj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "716318083855-du0l4g4pfq32ed2mism0364df4sha7lf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nitp.sac-app",
+                "app_store_id": "111"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
