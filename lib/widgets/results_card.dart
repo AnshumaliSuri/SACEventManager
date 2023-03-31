@@ -1,11 +1,13 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import '../screens/card_screen.dart';
 
 class ResultsCardWidget extends StatefulWidget {
-  const ResultsCardWidget({super.key});
+  final snap;
+  const ResultsCardWidget({super.key, this.snap});
 
   @override
   State<ResultsCardWidget> createState() => _ResultsCardWidgetState();
@@ -30,8 +32,8 @@ class _ResultsCardWidgetState extends State<ResultsCardWidget> {
               SizedBox(
                 width: 75,
               ),
-              const Text(
-                'Card Title',
+              Text(
+                widget.snap['title'],
                 style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,
@@ -39,9 +41,31 @@ class _ResultsCardWidgetState extends State<ResultsCardWidget> {
               ),
             ]),
             const SizedBox(height: 8.0),
-            Text(
-              'Team1 VS Team2',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            Row(
+              children: [
+                Text(
+                  widget.snap['team1'],
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Text(
+                  'VS',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Text(
+                  widget.snap['team2'],
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+              ],
             ),
             SizedBox(
               height: 12,
@@ -49,11 +73,10 @@ class _ResultsCardWidgetState extends State<ResultsCardWidget> {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const Text(
-                  'date',
+                Text(
+                  DateFormat.yMMMd().format(widget.snap['date'].toDate()),
                   style: TextStyle(
                     fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ],
@@ -62,7 +85,7 @@ class _ResultsCardWidgetState extends State<ResultsCardWidget> {
               height: 15,
             ),
             Text(
-              'Result',
+              widget.snap['result'],
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
           ],
